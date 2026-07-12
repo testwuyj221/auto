@@ -9,12 +9,14 @@ Two free sources, combined:
 
 Both are free. YouTube API has a 10,000 unit/day quota; this call costs ~100 units.
 """
-import os
 import requests
 import xml.etree.ElementTree as ET
+import os
+from dotenv import load_dotenv
 
-YOUTUBE_API_KEY = ""
+load_dotenv()  # loads .env file
 
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 # --- Topic queue -------------------------------------------------------
 # topics_queue.txt: one topic per line, edit freely (blank lines / lines
 # starting with # are ignored). Each run consumes (removes) the first
