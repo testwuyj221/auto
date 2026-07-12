@@ -1,0 +1,12 @@
+# PulseRankd — 4 uploads/day at fixed times.
+# Install with: crontab deploy/crontab.txt
+# (adjust the path below to wherever you cloned the project on the server)
+#
+# Times are in the SERVER's timezone. Check it with `timedatectl` and set it
+# with `sudo timedatectl set-timezone Asia/Kolkata` (or your preferred zone)
+# before relying on these times being "9am my time" etc.
+
+0 8  * * * /home/ubuntu/shorts-automator/deploy/run_pipeline.sh
+0 12 * * * /home/ubuntu/shorts-automator/deploy/run_pipeline.sh
+0 16 * * * /home/ubuntu/shorts-automator/deploy/run_pipeline.sh
+0 20 * * * /home/ubuntu/shorts-automator/deploy/run_pipeline.sh

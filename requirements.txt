@@ -1,0 +1,11 @@
+requests
+python-dotenv
+edge-tts==7.2.8
+pydub==0.25.1
+moviepy==1.0.3
+pillow<10
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+flask
+gunicorn
