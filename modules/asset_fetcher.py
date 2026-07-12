@@ -9,11 +9,13 @@ good matches instead of always #1, and remembers which Pexels video IDs
 have already been used (across runs, via used_clips_log.txt) so a clip
 already in a previous Short is skipped in favor of a fresh one.
 """
-import os
 import random
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()  # loads .env file
 
-PEXELS_API_KEY = ""
+PEXELS_API_KEY = os.getenv("PEXELS_API_KEY")
 PEXELS_URL = "https://api.pexels.com/videos/search"
 
 # Persisted across runs (committed back to the repo alongside topics_queue.txt
